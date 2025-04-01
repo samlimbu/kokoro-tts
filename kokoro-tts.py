@@ -878,7 +878,11 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
         with open(input_file, 'r', encoding='utf-8') as file:
             text = file.read()
         # Treat single text file as one chapter devtest modify
-        chapters = [{'title': 'Chapter 1', 'content': 'text one'},{'title': 'Chapter 1', 'content': 'text two'}]
+        chapters = [
+            {'title': 'Chapter 1', 'content': 'text one'},
+            {'title': 'Chapter 1', 'content': 'text two'}
+            
+            ]
 
     if stream:
         import asyncio
@@ -894,8 +898,9 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
             
             for chapter_num, chapter in enumerate(chapters, 1):
                 print('chap',chapter)
-                chapter_dir = os.path.join(split_output, f"chapter_{chapter_num:03d}")
-                
+                chapter_dir = os.path.join(split_output, f"{chapter['title']}")
+                print(f"\nProcessing: {chapter['title']}")
+                # devtest modify
                 #chapter_dir = os.path.join(split_output, chapter.title)
                 print('chapter_dir',chapter_dir)
                 # Skip if chapter is already fully processed
