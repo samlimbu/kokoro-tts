@@ -1,4 +1,8 @@
 #!/usr/bin/env python3 python kokoro-tts.py config/text.txt config/1.wav --voice "af_heart" --split_output
+import sys
+sys.path.append('config')  # Adjust the folder name as needed
+from data import chapterLIST  # Now you can import LIST
+
 
 # Standard library imports
 import os
@@ -879,12 +883,12 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
     else:
         with open(input_file, 'r', encoding='utf-8') as file:
             text = file.read()
-        # Treat single text file as one chapter devtest modify
-        chapters = [
-            {'title': 'chap1', 'content':[{'slide':'1.0','text':'hello is there nayubody out there'},{'slide':'2.0','text':'knock if you can hear me'}]},                 
-            {'title': 'chap2', 'content':[{'slide':'1.0','text':'hello is there nayubody out there'}]}
-        ]
-
+        # Treat single text file as one chapter devtest modify json input here
+        # chapters = [
+        #     {'title': 'chap1', 'content':[{'slide':'1.0','text':'hello is there nayubody out there'},{'slide':'2.0','text':'this is adam me'}]},                 
+        #     {'title': 'chap2', 'content':[{'slide':'1.0','text':'hello is there nayubody out there'}]}
+        # ]
+        chapters = chapterLIST
     if stream:
         import asyncio
         # Stream each chapter 
@@ -948,7 +952,7 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
                 
                     total_chunks = len(content)
 
-                    processed_chunks = len([f for f in os.listdir(chapter_dir) if f.startswith({content['slide']}) and f.endswith(f".{format}")])
+                    processed_chunks = len([f for f in os.listdir(chapter_dir) if f.startswith('abc') and f.endswith(f".{format}")])
                 
                 #for chunk_num, chunk in enumerate(chunks, 1): 
                 #devtest
