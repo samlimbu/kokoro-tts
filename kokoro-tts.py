@@ -881,7 +881,6 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
         chapters = [
             {'title': 'Chapter 1', 'content': 'text one'},
             {'title': 'Chapter 1', 'content': 'text two'}
-            
             ]
 
     if stream:
