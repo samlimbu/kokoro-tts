@@ -62,13 +62,15 @@ def extract_text_from_epub(epub_file):
 
 def chunk_text(text, initial_chunk_size=1000):
     """Split text into chunks at sentence boundaries with dynamic sizing."""
-    sentences = text.replace('\n', ' ').split('.')
+    sentences = text.replace('\n', ' ').split('###')
+    #sentences = text.replace('\n', ' ').split('.')
     chunks = []
     current_chunk = []
     current_size = 0
     chunk_size = initial_chunk_size
-    
+    print(sentences)
     for sentence in sentences:
+        print(sentence)
         if not sentence.strip():
             continue  # Skip empty sentences
         
@@ -107,7 +109,6 @@ def chunk_text(text, initial_chunk_size=1000):
     
     if current_chunk:
         chunks.append(' '.join(current_chunk))
-    
     return chunks
 
 def validate_language(lang, kokoro):
@@ -880,10 +881,9 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
             text = file.read()
         # Treat single text file as one chapter devtest modify
         chapters = [
-            {'title': 'topic1', 'content': 'text one'},
-            {'title': 'topic1', 'content': 'text two'},
-            {'title': 'topic2', 'content': 'text two'}
-            ]
+            {'title': 'chap1', 'content':[{'slide':'1.0','text':'hello is there nayubody out there'},{'slide':'2.0','text':'knock if you can hear me'}]},                 
+            {'title': 'chap2', 'content':[{'slide':'1.0','text':'hello is there nayubody out there'}]}
+        ]
 
     if stream:
         import asyncio
@@ -921,26 +921,43 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
                     #     else:
                     #         print(f"\nResuming {chapter['title']}: Found {existing_chunks}/{total_chunks} chunks")
 
-                print(f"\nProcessing: {chapter['title']}")
+
+                
+                print(f"\nProcessing>>: {chapter['title']}")
+                # Write chapter info if not exists
+                # info_file = os.path.join(chapter_dir, "info.txt")
+                # if not os.path.exists(info_file):
+                #     with open(info_file, "w", encoding="utf-8") as f:
+                #         f.write(f"Title: {chapter['title']}\n")
+                
+                #chunks = chunk_text(chapter['content'], initial_chunk_size=1000)
+                chunks = []
                 os.makedirs(chapter_dir, exist_ok=True)
                 
-                # Write chapter info if not exists
-                info_file = os.path.join(chapter_dir, "info.txt")
-                if not os.path.exists(info_file):
-                    with open(info_file, "w", encoding="utf-8") as f:
-                        f.write(f"Title: {chapter['title']}\n")
+
+
+
+                # for content in chapter['content']:
+                #     print(content['text'])
+                #     chunks.append(content['text'])
+               
+                for content in chapter['content']:
+                    
+                    #chunks.append(content['text'])
+                    chunk = content['text']
                 
-                chunks = chunk_text(chapter['content'], initial_chunk_size=1000)
-                total_chunks = len(chunks)
-                processed_chunks = len([f for f in os.listdir(chapter_dir) 
-                                     if f.startswith("chunk_") and f.endswith(f".{format}")])
+                    total_chunks = len(content)
+
+                    processed_chunks = len([f for f in os.listdir(chapter_dir) if f.startswith({content['slide']}) and f.endswith(f".{format}")])
                 
-                for chunk_num, chunk in enumerate(chunks, 1):
+                #for chunk_num, chunk in enumerate(chunks, 1): 
+                #devtest
                     if stop_audio:  # Check for interruption
                         break
                     
-                    # Skip if chunk file already exists (regardless of position)
-                    chunk_file = os.path.join(chapter_dir, f"chunk_{chunk_num:03d}.{format}")
+                    # Skip if chunk file already exists (regardless of position) #devtest here
+                    #chunk_file = os.path.join(chapter_dir, f"chunkBBCC_{chunk_num:03d}.{format}")
+                    chunk_file = os.path.join(chapter_dir, f"{content['slide']}.{format}")
                     if os.path.exists(chunk_file):
                         continue  # Don't increment processed_chunks here since we counted them above
                     
@@ -965,7 +982,7 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
                             sf.write(chunk_file, samples, sample_rate)
                             processed_chunks += 1
                     except Exception as e:
-                        print(f"\nError processing chunk {chunk_num}: {e}")
+                        print(f"\nError processing chunk {'chunk_num'}: {e}")
                     
                     stop_spinner = True
                     spinner_thread.join()
