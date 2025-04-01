@@ -879,8 +879,8 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
             text = file.read()
         # Treat single text file as one chapter devtest modify
         chapters = [
-            {'title': 'Chapter 1', 'content': 'text one'},
-            {'title': 'Chapter 1', 'content': 'text two'}
+            {'title': 'topic1', 'content': 'text one'},
+            {'title': 'topic1', 'content': 'text two'}
             ]
 
     if stream:
@@ -907,6 +907,7 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
                     info_file = os.path.join(chapter_dir, "info.txt")
                     if os.path.exists(info_file):
                         chunks = chunk_text(chapter['content'], initial_chunk_size=1000)
+                        print('chunks',chunks)
                         total_chunks = len(chunks)
                         existing_chunks = len([f for f in os.listdir(chapter_dir) 
                                             if f.startswith("chunk_") and f.endswith(f".{format}")])
