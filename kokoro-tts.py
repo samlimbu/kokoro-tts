@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3 python kokoro-tts.py config/text.txt config/1.wav --voice "af_heart" --split_output
 
 # Standard library imports
 import os
@@ -852,6 +852,7 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
             input()
             
             if split_output:
+                print(split_output)
                 os.makedirs(split_output, exist_ok=True)
                 
                 # First create all chapter directories and info files
@@ -880,7 +881,8 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
         # Treat single text file as one chapter devtest modify
         chapters = [
             {'title': 'topic1', 'content': 'text one'},
-            {'title': 'topic1', 'content': 'text two'}
+            {'title': 'topic1', 'content': 'text two'},
+            {'title': 'topic2', 'content': 'text two'}
             ]
 
     if stream:
@@ -891,32 +893,33 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
             chunks = chunk_text(chapter['content'], initial_chunk_size=1000)
             asyncio.run(stream_audio(kokoro, chapter['content'], voice, speed, lang, debug))
     else:
-        if split_output:
-            print('splitoutput',split_output)
-            os.makedirs(split_output, exist_ok=True)
-            
-            for chapter_num, chapter in enumerate(chapters, 1):
-                print('chap',chapter)
-                chapter_dir = os.path.join(split_output, f"{chapter['title']}")
-                print(f"\nProcessing: {chapter['title']}")
+        #if split_output:
+        if 1==1: # do not skip devtest
+          #os.makedirs(split_output, exist_ok=True)
+            spOutput = "config"
+            os.makedirs(spOutput, exist_ok=True)
+     
+            for chapter_num, chapter in enumerate(chapters, 1):                
+                #print(f"\nProcessing: {chapter['title']}")
                 # devtest modify
                 #chapter_dir = os.path.join(split_output, chapter.title)
+                chapter_dir = os.path.join(spOutput, f"{chapter['title']}")
                 print('chapter_dir',chapter_dir)
                 # Skip if chapter is already fully processed
                 if os.path.exists(chapter_dir):
                     info_file = os.path.join(chapter_dir, "info.txt")
-                    if os.path.exists(info_file):
-                        chunks = chunk_text(chapter['content'], initial_chunk_size=1000)
-                        print('chunks',chunks)
-                        total_chunks = len(chunks)
-                        existing_chunks = len([f for f in os.listdir(chapter_dir) 
-                                            if f.startswith("chunk_") and f.endswith(f".{format}")])
+                    # if os.path.exists(info_file):
+                    #     chunks = chunk_text(chapter['content'], initial_chunk_size=1000)
+                    #     print('chunks-----',chunks)
+                    #     total_chunks = len(chunks)
+                    #     existing_chunks = len([f for f in os.listdir(chapter_dir) 
+                    #                         if f.startswith("chunk_") and f.endswith(f".{format}")])
                         
-                        if existing_chunks == total_chunks:
-                            print(f"\nSkipping {chapter['title']}: Already completed ({existing_chunks} chunks)")
-                            continue
-                        else:
-                            print(f"\nResuming {chapter['title']}: Found {existing_chunks}/{total_chunks} chunks")
+                    #     if existing_chunks == total_chunks:
+                    #         print(f"\nSkipping {chapter['title']}: Already completed ({existing_chunks} chunks)")
+                    #         continue
+                    #     else:
+                    #         print(f"\nResuming {chapter['title']}: Found {existing_chunks}/{total_chunks} chunks")
 
                 print(f"\nProcessing: {chapter['title']}")
                 os.makedirs(chapter_dir, exist_ok=True)
@@ -975,9 +978,10 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
                 if stop_audio:  # Check for interruption
                     break
             
-            print(f"\nCreated audio files for {len(chapters)} chapters in {split_output}/")
+            print(f"\nCreated audio files for {len(chapters)} chapters in {spOutput}/")
         else:
             # Combine all chapters into one file
+            print('Combine all chapters into one file')
             all_samples = []
             sample_rate = None
             
