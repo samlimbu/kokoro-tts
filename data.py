@@ -1,20 +1,95 @@
 chapterLIST = [
     
-    {'title':'c1s1', 'content':[
+    {'title':'c1s14', 'content':[
 
-            {'slide':'1.0','text':'The history of money laundering is as old as illicit activities themselves, but the methods and sophistication have evolved significantly over time.'}
+{'slide':'c1s14_1','text':'STR is a document that Reporting Entities file with relevant authorities when they detect transactions that raise suspicion of illegal activities,   '},
+{'slide':'c1s14_2','text':'such as corruption, fraud, tax evasion or any other predicate offence.'},
+{'slide':'c1s14_3','text':'The purpose of an STR is to alert authorities to potential criminal activity for further investigation.'},
+{'slide':'c1s14_4','text':'A transaction is considered suspicious if it does not fit the customer’s declaration in KYC form or seems to lack a legitimate economic, business, or lawful purpose.'},
+{'slide':'c1s14_5','text':'Examples include unusually large cash transactions, frequent high-value transactions, or transactions involving high-risk jurisdictions.  '},
+{'slide':'c1s14_6','text':'FIU-Nepal receives attempted suspicious transaction report in SAR report category and other in STR report category.'},
+{'slide':'c1s14_7','text':'As per ALPA, 2008 STR/SAR must be filed as soon as possible after preliminary analysis.'},
+{'slide':'c1s14_8','text':'STR/SARs have been instrumental in enabling law enforcement to initiate or supplement major money laundering or terrorist financing investigations and other criminal cases.  '},
+{'slide':'c1s14_9','text':'Information provided in STR/SAR helps identifying emerging trends and patterns associated with financial crimes.'},
+{'slide':'c1s14_10','text':'The information about those trends and patterns is vital to law enforcement agencies and provides valuable feedback to them.'},
+{'slide':'c1s14_11','text':'FIU-Nepal has issued STR/SAR Guidelines clarifying the obligation to report suspicious transactions under the ALPA, 2008 and ALPR, 2024 and providing knowledge on indicators of suspicious activities.     '},
+{'slide':'c1s14_12','text':'As per NRB Unified Directive no. 19:'},
+{'slide':'c1s14_13','text':'Suspicious transaction detection mechanism should be developed by banks.'},
+{'slide':'c1s14_14','text':'Identifying and reporting of suspicious transactions should be guided by risk assessment as well as customer\'s profile, transactions and inherent.'},
+{'slide':'c1s14_15','text':'After preliminary analysis, suspicious transactions should be categorized into STR-PEP, STR-TBML, STR-High, STR- Medium and STR- Low and then submitted to FIU-Nepal via goAML software'},
+{'slide':'c1s14_16','text':'Banks should develop mechanism to identify attempt of customers to conduct suspicious transactions and suspicious activities, such attempted transactions should be reported to FIU-Nepal as Suspicious Activity Report (SAR).'},
+{'slide':'c1s14_17','text':'TTR is a report banks are required to file to FIU-Nepal for transactions exceeding the defined threshold.      '},
+{'slide':'c1s14_18','text':'TTRs are crucial to develop the data bank of customer/clients\' profile for future use in case such transactions happen to be connected with money laundering and terrorist financing offences.'},
+{'slide':'c1s14_19','text':'As per NRB Unified Directive no. 19, banks should submit TTR to the FIU-Nepal via goAML Software within 15 days from the date of transaction.'},
+{'slide':'c1s14_20','text':'Threshold reporting ceiling for banks are:'},
+{'slide':'c1s14_21','text':'Deposit or withdrawal of Rs. 1 million or more in cash in one transaction or in a series of transactions in one day in single account. (TTR-Cash)'},
+{'slide':'c1s14_22','text':'Cross Border Electronic or other transfer of Rs. 1 million or more by a customer in single or in a series of transactions in one day. (TTR-Cross Border)'},
+{'slide':'c1s14_23','text':'Exchange of foreign currency equivalent to Rs 5,00,000/- or more by a customer in one transaction or in a series of transactions in one day. (TTR-FCY)'},
+{'slide':'c1s14_24','text':'Exemption to TTR Reporting are:     '},
+{'slide':'c1s14_25','text':'Transactions carried out by the Government of Nepal or any office or body under the Government of Nepal,'},
+{'slide':'c1s14_26','text':'Transactions carried on by entities established under special Acts,'},
+{'slide':'c1s14_27','text':'Transactions carried out by the institution itself or with other BFIs or government bodies;'},
+{'slide':'c1s14_28','text':'Transactions of BFIs in providing loans or facilities to its customers in accordance with prevailing laws,'},
+{'slide':'c1s14_29','text':'Transactions related to payment of pensions of Nepal Army, Nepal Police and other organizations.'},
+{'slide':'c1s14_30','text':'A Politically Exposed Person (PEP) is an individual who holds or has held a prominent public position, either domestically or internationally,  '},
+{'slide':'c1s14_31','text':'and is therefore considered to pose a higher risk of being involved in corruption, bribery, or other financial crimes due to their access to power and influence.'},
+{'slide':'c1s14_32','text':'TAs per ALPA, 2008 PEP means a domestic high-level official and foreign high-level official or high-level official of an international organization.'},
+{'slide':'c1s14_33','text':'Foreign PEP means any person who is or has been entrusted with a prominent public function is a foreign country, including Head of State or of Government, a senior politician, central official of a national political party, senior administrator, senior judicial or military official and a senior official of a state-controlled body of that country. '},
+{'slide':'c1s14_34','text':'Domestic PEP means the President, Vice- President, Prime Minister, Chief Justice, Speaker of the House of Representatives, Chairperson of the National Assembly, Chief of Province, Ministers of the Government of Nepal, Chief Minister of the Provincial Government, member of the Federal Parliament, official of a constitutional body, Speaker of the Provincial Assembly, Minister of the Provincial Government, official holding the special class of the Government of Nepal (or higher), Judge of High Court (or higher court), Deputy Speaker of the Provincial Assembly, Member of the Provincial Assembly, central office-bearer of a national political party, '},
+{'slide':'c1s14_35','text':'Chief and Deputy Chief of the District Coordination Committee, Mayor and Deputy Mayor of Municipality, Chairperson and Vice-Chairperson of Rural Municipality, senior official of a body fully or partly owned by the Government of Nepal.'},
+{'slide':'c1s14_36','text':'As per NRB Unified Directive no. 19, in order to identify the PEP the bank should have following mechanism to identify PEP while opening account, transacting with customers, and updating information on customers:  '},
+{'slide':'c1s14_37','text':'Mechanism to immediately identify PEP on updated PEP list'},
+{'slide':'c1s14_38','text':'Mechanism to identify family members and close associates of PEP '},
+{'slide':'c1s14_39','text':'Mechanism to identify risk on the basis of official status and involvement of PEP'},
+{'slide':'c1s14_40','text':'Processes that should be adopted to identify PEPs are:       '},
+{'slide':'c1s14_41','text':'Receive information from customer or self-declaration'},
+{'slide':'c1s14_42','text':'Check publicly available information'},
+{'slide':'c1s14_43','text':'Evaluate information available in social media'},
+{'slide':'c1s14_44','text':'Check commercially available database.'},
+{'slide':'c1s14_45','text':'Taking information from the related records kept in any agency according to the prevailing law.'},
+{'slide':'c1s14_46','text':'Prepare the list of PEP by asking for list at least once in a year from organisations associated with Government of Nepal.'},
+{'slide':'c1s14_47','text':'PEP listing shall be done continued until 5 years of retirement or relieve from office'},
+
 
 
         ]},
 
+ {'title':'c1s17', 'content':[
 
-    {'title':'c1s2', 'content':[
-    
-         {'slide':'23.0.1','text':'The launderer might choose to invest the funds into real estate, luxury assets, or business ventures.'}
+{'slide':'c1s17_1','text':'If the provisions mentioned in Asset (Money) Laundering Prevention Act, 2008 (ALPA, 2008), Asset (Money) Laundering Prevention Rules, 2024 (ALPR, 2024) and directive issued by Nepal Rastra Bank   '},
+{'slide':'c1s17_2','text':'is not complied with there are number of fines and penalties that FIU-Nepal and Regulator/Supervisor can impose which is highlighted in following points:'},
+{'slide':'c1s17_3','text':'FIU-Nepal can impose a fine not exceeding ten million rupees on a reporting entity or its officer or employee which/who '},
+{'slide':'c1s17_4','text':'fails to submit a suspicious transaction report or threshold transactions report orbreaches the confidentiality of information orfails to provide information at the specified time'},
+{'slide':'c1s17_5','text':'Nepal Rastra Bank (regulator/Supervisor) may take any or all of the following actions and sanctions against the bank which fails to comply with the provisions: '},
+{'slide':'c1s17_6','text':'Warn in writingImpose a fine of one million to fifty million rupees, Impose full or partial restriction on transaction, profession or business,to suspend or revoke the permit, license or registration.'},
+{'slide':'c1s17_7','text':'The provision of sanctions and punishment to the bank is further clarified in NRB Unified Directive 2080 (Directive No.19), which are as follows Provisions not complied Actions  '},
+{'slide':'c1s17_8','text':'1. If policy and procedure is not formulated. Ask clarification for first timeFrom second time onwards, impose a fine of NRs. 1 million or up to NRs 50 million as per severity'},
+{'slide':'c1s17_9','text':'2. If the provision regarding customer identification not executed. (or it is not effective) Ask clarification for first timeFor second time, impose a fine of NRs 1 millionFrom third time onwards, impose a fine of NPR. 5 million or higher as per severity'},
+{'slide':'c1s17_10','text':'Provisions not complied Actions '},
+{'slide':'c1s17_11','text':'3. If it is found that transactions have been done in anonymous or fictitious name. Impose a fine of NRs 5 million or higher as per severity'},
+{'slide':'c1s17_12','text':'4. If non-compliance of provision of Chapter 6B of the Act has been found. For first time, impose a fine of NRs 2 million. For second time, impose a fine of NRs 5 million.From third time onwards, impose a fine of NRs. 20 million or up to Rs 50 million as per severityIf there are frequent systemic problems, take action of partial or complete suspension or cancellation of the license.'},
+{'slide':'c1s17_13','text':'Provisions not complied Actions '},
+{'slide':'c1s17_14','text':'5. If there is no system of identification of PEPs. (or it is not effective) For first time, impose a fine of Rs 1 million For second time, impose a fine of Rs 2 million.From third time onwards, impose a fine of NRs. 10 million or up to Rs 50 million as per severity'},
+{'slide':'c1s17_15','text':'6. If there is no provision to identify the beneficial owner, to perform enhanced customer due diligence and to update KYC. (or it is not effective) For first time, impose a fine of Rs 1 million.For second time, impose a fine of Rs 2 million.From third time onwards, impose a fine of NRs. 10 million or up to Rs 50 million as per severity'},
+{'slide':'c1s17_16','text':'Provisions not complied Actions 7. Money Laundering Prevention Committee has not worked as per responsibilities assigned Impose a fine of 1 million or higher as per severity8. Customer cannot be identified on wire transfer or remittance Impose a fine of Rs 1 million or transaction amount, whichever is higher or even higher amount as per severity 9. Beneficial owner cannot be identified on wire transfer or remittance Impose a fine of Rs 2 million or transaction amount, whichever is higher or even higher amount as per severity.'},
+{'slide':'c1s17_17','text':'7. Money Laundering Prevention Committee has not worked as per responsibilities assigned Impose a fine of 1 million or higher as per severity'},
+{'slide':'c1s17_18','text':'8. Customer cannot be identified on wire transfer or remittance Impose a fine of Rs 1 million or transaction amount, whichever is higher or even higher amount as per severity'},
+{'slide':'c1s17_19','text':'9. Beneficial owner cannot be identified on wire transfer or remittance Impose a fine of Rs 2 million or transaction amount, whichever is higher or even higher amount as per severity.'},
+{'slide':'c1s17_20','text':'Provisions not complied Actions 10. Correspondent banking related transaction conducted without ensuring AML CFT measures Impose a fine of Rs 1 million or transaction amount, whichever is higher or even higher amount as per severity.11. Lack of Ongoing monitoring (or it is not effective) For first time, impose a fine of Rs 1 million. From second time onwards, impose a fine of NRs. 2 million or higher as per severity. 12. TTR not sent to FIU on time For first time, impose a fine of Rs 2 million. For second time, impose a fine of Rs 5 million. From third time onwards, impose a fine of NRs. 10 million or up to Rs 50 million as per severity'},
+{'slide':'c1s17_21','text':'10. Correspondent banking related transaction conducted without ensuring AML CFT measures Impose a fine of Rs 1 million or transaction amount, whichever is higher or even higher amount as per severity.'},
+{'slide':'c1s17_22','text':'11. Lack of Ongoing monitoring (or it is not effective) For first time, impose a fine of Rs 1 million. From second time onwards, impose a fine of NRs. 2 million or higher as per severity.'},
+{'slide':'c1s17_23','text':'12. TTR not sent to FIU on time For first time, impose a fine of Rs 2 million. For second time, impose a fine of Rs 5 million. From third time onwards, impose a fine of NRs. 10 million or up to Rs 50 million as per severity'},
+{'slide':'c1s17_24','text':'Provisions not complied Actions 13. Lack of suspicious transaction monitoring mechanism and STR not sent in prescribed format and on time (or it is not effective) For first time, impose a fine of Rs 2 million. For second time, impose a fine of Rs 5 million. From third time onwards, impose a fine of NRs. 10 million or up to Rs 50 million as per severity 14. Compliance officer not appointed Impose a fine of Rs 2 million.15. Money Laundering Prevention Committee did not present report on time and Board of Directors did not evaluate Ask clarification for first time For second time, impose a fine of Rs 1 million From third time onwards, impose a fine of NRs. 5 million or higher as per severity'},
+{'slide':'c1s17_25','text':'13. Lack of suspicious transaction monitoring mechanism and STR not sent in prescribed format and on time (or it is not effective) For first time, impose a fine of Rs 2 million. For second time, impose a fine of Rs 5 million. From third time onwards, impose a fine of NRs. 10 million or up to Rs 50 million as per severity'},
+{'slide':'c1s17_26','text':'14. Compliance officer not appointed Impose a fine of Rs 2 million.'},
+{'slide':'c1s17_27','text':'15. Money Laundering Prevention Committee did not present report on time and Board of Directors did not evaluate Ask clarification for first time For second time, impose a fine of Rs 1 million From third time onwards, impose a fine of NRs. 5 million or higher as per severity'},
+{'slide':'c1s17_28','text':'Provisions not complied Actions 16. Institutional and employee capacity not developed Ask clarification for first time For second time, impose a fine of Rs 1 million. From third time onwards, impose a fine of NRs. 2 million or higher as per severity 17. Compliance officer not appointed Impose a fine of Rs 2 million.Note: If the actions to be taken according to these provisions are not is sufficient, NRB may take additional actions against BFIs in accordance with the Nepal Rastra Bank Act, 2058 and the Bank and Financial Institutions Act, 2073.'},
+{'slide':'c1s17_29','text':'16. Institutional and employee capacity not developed Ask clarification for first time For second time, impose a fine of Rs 1 million. From third time onwards, impose a fine of NRs. 2 million or higher as per severity'},
+{'slide':'c1s17_30','text':'17. Compliance officer not appointed Impose a fine of Rs 2 million.'},
+{'slide':'c1s17_31','text':'Note: If the actions to be taken according to these provisions are not is sufficient, NRB may take additional actions against BFIs in accordance with the Nepal Rastra Bank Act, 2058 and the Bank and Financial Institutions Act, 2073.'},
 
 
+        ]},
 
-        ]
-    }
 
 ]
