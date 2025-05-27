@@ -1,1 +1,43 @@
-python kokoro-tts.py example.txt output.wav --voice "am_adam:79,af_heart:21" --speed 0.82
+python kokoro-tts.py example.txt output.wav --voice "am_adam:77,af_heart:33" --speed 0.82
+
+#whispery
+python kokoro-tts.py example.txt output.wav --voice "am_adam:20,af_nicole:80"
+#
+python kokoro-tts.py example.txt output.wav --voice "af_bella:50,af_sarah:50"
+
+
+
+
+am_adam
+am_echo,
+am_eric = high
+am_fenrir = high,
+am_liam = med
+am_michael = low-med slow
+am_onyx = low slow soft
+am_puck = high
+
+af_alloy = low
+af_aoede = med low 
+af_bella = low m
+af_heart = med f
+af_jessica = v high
+af_kore = med low , slow-normal
+af_nicole = med f slow whispery
+af_nova = f med
+af_river = med m, fast-normal
+af_sarah = med fast, f
+af_sky = low-med
+
+
+af (A balanced mix of Bella and Sarah voices)
+af_bella (American female voice with warm tones)
+af_sarah (American female voice with clear articulation)
+am_adam (American male voice with natural inflection)
+am_michael (American male voice with deeper tones)
+bf_emma (Female voice with British accent)
+bf_isabella (British female voice with soft tones)
+bm_george (Male voice with British accent)
+bm_lewis (British male voice with mature tone)
+af_nicole (American female voice with dynamic range)
+af_sky (American female voice with youthful energy)

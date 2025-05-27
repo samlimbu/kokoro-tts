@@ -962,8 +962,10 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
                     # Skip if chunk file already exists (regardless of position) #devtest here
                     #chunk_file = os.path.join(chapter_dir, f"chunkBBCC_{chunk_num:03d}.{format}")
                     chunk_file = os.path.join(chapter_dir, f"{content['slide']}.{format}")
-                    if os.path.exists(chunk_file):
-                        continue  # Don't increment processed_chunks here since we counted them above
+
+                    #comment out 2 lines below if overwrite
+                    #if os.path.exists(chunk_file):
+                        #continue  # Don't increment processed_chunks here since we counted them above
                     
                     # Create progress bar
                     filled = "■" * processed_chunks
