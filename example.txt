@@ -1,0 +1,1 @@
+kokoro-tts example.txt output.wav --voice "af_sarah:60,am_adam:40"

@@ -22,7 +22,6 @@ voices.json
 
 # book files
 *.epub
-*.txt
 *.pdf
 !requirements.txt
 
