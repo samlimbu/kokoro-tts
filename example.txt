@@ -1,7 +1,7 @@
 python kokoro-tts.py example.txt output.wav --voice "am_adam:77,af_heart:33" --speed 0.82
 
 #whispery
-python kokoro-tts.py example.txt output.wav --voice "am_adam:20,af_nicole:80"
+python kokoro-tts.py example.txt output.wav --voice "am_echo:20,af_nicole:80"
 #
 python kokoro-tts.py example.txt output.wav --voice "af_bella:50,af_sarah:50"
 
@@ -12,7 +12,7 @@ am_adam
 am_echo,
 am_eric = high
 am_fenrir = high,
-am_liam = med
+am_liam = med, bit fast
 am_michael = low-med slow
 am_onyx = low slow soft
 am_puck = high
@@ -41,3 +41,11 @@ bm_george (Male voice with British accent)
 bm_lewis (British male voice with mature tone)
 af_nicole (American female voice with dynamic range)
 af_sky (American female voice with youthful energy)
+
+Hannah	af_bella	English (US)	Female	American female with reserved personality
+Kaitlyn	af_nicole	English (US)	Female	American female with whisper-like voice, looks casual
+Lauren	af_sarah	English (US)	Female	American female, probably an educator; confident
+Sierra	af_sky	English (US)	Female	American female with high level of composure
+
+Noah	am_adam	English (US)	Male	American male with confident personality
+Daniel	am_michael	English (US)	Male	American male with confident person

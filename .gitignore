@@ -8,7 +8,7 @@ wheels/
 test.*
 .venv
 *.bkp
-*.wav
+
 *.mp3
 book_audio/
 chunks/
