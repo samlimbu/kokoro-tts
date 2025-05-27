@@ -1,1 +1,1 @@
-kokoro-tts example.txt output.wav --voice "af_sarah:60,am_adam:40"
+python kokoro-tts.py example.txt output.wav --voice "am_adam:79,af_heart:21" --speed 0.82
