@@ -1,4 +1,4 @@
-python kokoro-tts.py example.txt output.wav --voice "am_adam:77,af_heart:33" --speed 0.82
+python kokoro-tts.py example.txt output.wav --voice "am_echo:60,am_adam:40" --speed 0.83
 
 #whispery
 python kokoro-tts.py example.txt output.wav --voice "am_echo:20,af_nicole:80"
