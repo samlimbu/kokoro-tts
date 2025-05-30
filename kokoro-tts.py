@@ -975,7 +975,7 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
                     stop_spinner = False
                     spinner_thread = threading.Thread(
                         target=spinning_wheel,
-                        args=(f"Processing {chapter['title']}", progress_bar)
+                        args=(f"Processing {chapter['title']} ; {content['slide']}", progress_bar)
                     )
                     spinner_thread.start()
                     
@@ -996,7 +996,7 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
                     if stop_audio:  # Check for interruption
                         break
                 
-                print(f"\nCompleted {chapter['title']}: {processed_chunks}/{total_chunks} chunks processed")
+                print(f"\nCompleted {content['slide']} {chapter['title']}: {processed_chunks}/{total_chunks} chunks processed")
                 
                 if stop_audio:  # Check for interruption
                     break
