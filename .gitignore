@@ -10,6 +10,7 @@ test.*
 *.bkp
 *.wav
 *.mp3
+*.opus
 book_audio/
 chunks/
 voices.json
@@ -24,4 +25,3 @@ voices.json
 *.epub
 *.pdf
 !requirements.txt
-
