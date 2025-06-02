@@ -6,7 +6,7 @@ python kokoro-tts.py example.txt output.wav --voice "am_echo:20,af_nicole:80"
 python kokoro-tts.py example.txt output.wav --voice "af_bella:50,af_sarah:50"
 
 
-
+export audacity - overwrite files, 24kHz 32kbps
 
 am_adam
 am_echo,
@@ -18,7 +18,7 @@ am_onyx = low slow soft
 am_puck = high
 
 af_alloy = low
-af_aoede = med low 
+af_aoede = med low
 af_bella = low m
 af_heart = med f
 af_jessica = v high
