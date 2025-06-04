@@ -25,3 +25,6 @@ voices.json
 *.epub
 *.pdf
 !requirements.txt
+
+#
+data.py
