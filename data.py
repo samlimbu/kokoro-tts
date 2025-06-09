@@ -1,6 +1,7 @@
 chapterLIST = [
 
-{'title':'c1', 'content':[{'slide':'c2A_1','text':"Note that Recommendations marked with an asterisk have intpretive notes, which should be read in conjunction with the Recommendation"}]},
-
+	{'title':'c', 'content':[{'slide':'demo','text':"You have now finished reading the course. You may now take the post-assessment for this course."}]},
 
 ]
+
+
