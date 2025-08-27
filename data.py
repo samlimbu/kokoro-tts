@@ -1,10 +1,10 @@
 chapterLIST = [
-
-{'title':'c', 'content':[{'slide':'c1s1c_0_0','text':"Chapter 1 ;-,;-,;-… Money Laundering, Terrorist Financing and Proliferation Financing"}]},
-{'title':'c', 'content':[{'slide':'c2_h2_155_0_0','text':"Chapter 2;-,;-,;-… AML-CFT Related International Bodies"}]},
-{'title':'c', 'content':[{'slide':'c3h2_193_0','text':"Chapter 3;-,;-,;-… Regulatory Bodies and Prevailing Laws, Regulations in Nepal"}]},
-{'title':'c', 'content':[{'slide':'c3s5c_246_0','text':"Chapter 4;-,;-,;-… M.L. T.F, Supervision and Supervisory guidelines"}]},
-{'title':'c', 'content':[{'slide':'c7_289_0','text':"Chapter 7;-,;-,;-… Mutual Evaluation"}]}
+{'title':'demo1', 'content':[{'slide':'RB_0','text':"Unit 1: RETAIL BANKING: INTRODUCTION"}]},
+{'title':'demo1', 'content':[{'slide':'RB_1','text':"OBJECTIVES"}]},
+{'title':'demo1', 'content':[{'slide':'RB_2','text':"The objectives of this unit are to understand the:"}]},
+{'title':'demo1', 'content':[{'slide':'RB_3','text':"History and definition of Retail Banking"}]},
+{'title':'demo1', 'content':[{'slide':'RB_4','text':"Characteristics of Retail Banking"}]},
+{'title':'demo1', 'content':[{'slide':'RB_5','text':"Advantages and constraints of Retail Banking"}]}
 ]
 
 
