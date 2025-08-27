@@ -1,0 +1,22 @@
+python kokoro-tts.py example_kokoro.txt output.wav --voice "am_echo:67,am_adam:33" --speed 0.83
+
+#whispery
+python kokoro-tts.py example.txt output.wav --voice "am_echo:20,af_nicole:80"
+#
+python kokoro-tts.py example.txt output.wav --voice "af_bella:50,af_sarah:50"
+
+
+export audacity - overwrite files, 24kHz 32kbps
+
+
+f5-tts_infer-cli --model "F5-TTS" --ref_audio "ref.wav" --ref_text "" --gen_text "Hello, this is cloned speech."
+
+
+https://ollama.com/blog/llama3.2-vision
+
+https://github.com/hnawaz007/AI/blob/main/OCR%20with%20Ollama/Ollama%20OCR%20Receipt%20to%20dataframe.ipynb
+
+
+mkdir output
+for %f in (*.wav, *.flac) do ffmpeg -y -i "%f" -ar 24000 -b:a 32k -c:a libopus ".\output\%~nf.opus"
+for %f in (*.wav, *.flac) do ffmpeg -y -i "%f" -ar 22050 -c:a aac -b:a 32k ".\output\%~nf.m4a"

@@ -26,6 +26,9 @@ from kokoro_onnx import Kokoro
 import pymupdf4llm
 import fitz
 
+#test
+
+
 warnings.filterwarnings("ignore", category=UserWarning, module='ebooklib')
 warnings.filterwarnings("ignore", category=FutureWarning, module='ebooklib')
 
@@ -898,7 +901,7 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
             asyncio.run(stream_audio(kokoro, chapter['content'], voice, speed, lang, debug))
     else:
         #if split_output:
-        if 1==1: # do not skip devtest
+        if 1==1: # do not skip devtest devprod modified by sam limbu
           #os.makedirs(split_output, exist_ok=True)
             spOutput = "config"
             os.makedirs(spOutput, exist_ok=True)
