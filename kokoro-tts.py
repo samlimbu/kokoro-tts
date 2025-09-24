@@ -888,8 +888,8 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
             text = file.read()
         # Treat single text file as one chapter devtest modify json input here
         # chapters = [
-        #     {'title': 'chap1', 'content':[{'slide':'1.0','text':'hello is there nayubody out there'},{'slide':'2.0','text':'this is adam me'}]},                 
-        #     {'title': 'chap2', 'content':[{'slide':'1.0','text':'hello is there nayubody out there'}]}
+        #     {'title': 'chap1', 'content':[{'fname':'1.0','text':'hello is there nayubody out there'},{'fname':'2.0','text':'this is adam me'}]},                 
+        #     {'title': 'chap2', 'content':[{'fname':'1.0','text':'hello is there nayubody out there'}]}
         # ]
         chapters = chapterLIST
     if stream:
@@ -952,6 +952,14 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
                     
                     #chunks.append(content['text'])
                     chunk = content['text']
+
+                    # Clean and grab first 4 words
+                    #words = re.findall(r'\w+', chunk)  # split on words only
+                    #first_four = "_".join(words[:4]) if words else "untitled"
+                    #print('words',words)
+
+                    # Sanitize filename (remove illegal chars)
+                    #safe_title = re.sub(r'[^a-zA-Z0-9_-]', "", first_four)
                 
                     total_chunks = len(content)
 
@@ -962,9 +970,9 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
                     if stop_audio:  # Check for interruption
                         break
                     
-                    # Skip if chunk file already exists (regardless of position) #devtest here
-                    #chunk_file = os.path.join(chapter_dir, f"chunkBBCC_{chunk_num:03d}.{format}")
-                    chunk_file = os.path.join(chapter_dir, f"{content['slide']}.{format}")
+                    chunk_file = os.path.join(chapter_dir, f"{content['fname']}.{format}")
+                        # Use first 4 words instead of fname ID
+                    #chunk_file = os.path.join(chapter_dir,f"{safe_title}.{format}")
 
                     #comment out 2 lines below if overwrite
                     #if os.path.exists(chunk_file):
@@ -978,7 +986,7 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
                     stop_spinner = False
                     spinner_thread = threading.Thread(
                         target=spinning_wheel,
-                        args=(f"Processing {chapter['title']} ; {content['slide']}", progress_bar)
+                        args=(f"Processing {chapter['title']} ; {content['fname']}", progress_bar)
                     )
                     spinner_thread.start()
                     
@@ -999,7 +1007,7 @@ def convert_text_to_audio(input_file, output_file=None, voice=None, speed=1.0, l
                     if stop_audio:  # Check for interruption
                         break
                 
-                print(f"\nCompleted {content['slide']} {chapter['title']}: {processed_chunks}/{total_chunks} chunks processed")
+                print(f"\nCompleted {content['fname']} {chapter['title']}: {processed_chunks}/{total_chunks} chunks processed")
                 
                 if stop_audio:  # Check for interruption
                     break
