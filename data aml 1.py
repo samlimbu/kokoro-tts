@@ -17,7 +17,21 @@ chapterLIST = [
 {'title':'c', 'content':[{'fname':'c2_159_0_0','text':"Note that Recommendations marked with an asterisk have interpretive notes, which should be read in conjunction with the Recommendation"}]},
 {'title':'c', 'content':[{'fname':'c5_260_0_1','text':"To ensure this NRB has developed questionnaire to assess the adequacy of their policies and internal controls for deterring, detecting and reporting suspected money laundering and terrorist financing activities (M.L. F.T,)."}]},
 {'title':'c', 'content':[{'fname':'c5_265_0_0','text':"The goAML application is the Software Products developed by United Nations Office on Drugs and Crime U N O D C in order to respond to money laundering and terrorist financing, and Financial Intelligence Units bolstering their efforts in combating financial crimes."}]},
-
+{'title':'c', 'content':[{'fname':'c3_197_0_1','text':"Regulator;-,;-,;-… Department of Co-operatives, Province Governments and Local Governments"}]},
+{'title':'c', 'content':[{'fname':'c3_197_0_2','text':"Reporting Entities;-,;-,;-… Co-operatives"}]},
+{'title':'c', 'content':[{'fname':'c7_308_0_1','text':"Currently there are three countries in black list viz."}]},
+{'title':'c', 'content':[{'fname':'c5_267_0_6','text':"SAR (Suspicious Activity Report)"}]},
+{'title':'c', 'content':[{'fname':'c5_267_0_6a','text':"STR-TBML"}]},
+{'title':'c', 'content':[{'fname':'c5_267_0_7','text':"B) Parts to be included in STR SAR Report"}]},
+{'title':'c', 'content':[{'fname':'c5_267_0_8','text':"Reporting of STR SAR must include:"}]},
+{'title':'c', 'content':[{'fname':'c5_267_0_9','text':"STR SAR body ('Reason field';-,;-,;-… Required;-,;-,;-…  'Suspicious Amount' field;-,;-,;-… Required)"}]},
+{'title':'c', 'content':[{'fname':'c5_267_0_10','text':"Attachments"}]},
+{'title':'c', 'content':[{'fname':'c5_267_0_11','text':"Indicators"}]},
+{'title':'c', 'content':[{'fname':'c5_267_0_12','text':"Transactions"}]},
+{'title':'c', 'content':[{'fname':'c1s14_59_0_1','text':"As per ALPA, 2008 Pep means a domestic high-level official and foreign high-level official or high-level official of an international organization."}]},
+{'title':'c', 'content':[{'fname':'c1s14_60_0','text':"Foreign Pep means any person who is or has been entrusted with a prominent public function in a foreign country, including Head of State or of Government, a senior politician, central official of a national political party, senior administrator, senior judicial or military official and a senior official of a state-controlled body of that country. "}]},
+{'title':'c', 'content':[{'fname':'c1s26_133_0_0','text':"Beneficial owner;-,;-,;-… It refers to the natural person or persons who ultimately owns or controls or holds management position with respect to legal person or arrangement."}]},
+{'title':'c', 'content':[{'fname':'c1s26_133_0_2','text':"Compliance Officer- is an employee (of at least management level) responsible for ensuring that the organization adheres to legal and regulatory requirements, industry standards, and internal policies related with AML CFT."}]},
 ]
 
 
